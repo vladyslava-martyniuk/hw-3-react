@@ -1,6 +1,7 @@
 {
   "name": "hw-3-react",
-  "homepage": "https://github.com/vladyslava-martyniuk/hw-3-react.git",
+  "homepage": "https://vladyslava-martyniuk.github.io/hw-3-react",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
