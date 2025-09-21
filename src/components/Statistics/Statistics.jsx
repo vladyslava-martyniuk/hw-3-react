@@ -1,14 +1,26 @@
+import styles from "./Statistics.module.css";
+
+// функція для генерації випадкового кольору
+function getRandomColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, "0")}`;
+}
+
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {/* title не обовʼязковий */}
-      {title && <h2 className="title">{title}</h2>}
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>{title}</h2>}
 
-      <ul className="stat-list">
+      <ul className={styles.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <li key={id} className="item">
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}%</span>
+          <li
+            key={id}
+            className={styles.item}
+            style={{ backgroundColor: getRandomColor() }} // додаємо фон
+          >
+            <span className={styles.label}>{label}</span>
+            <span className={styles.percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>

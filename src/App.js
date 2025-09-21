@@ -1,3 +1,4 @@
+import './App.css';
 import user from "./data/user.json";
 import { Profile } from "./components/Profile/Profile";
 import statistics from "./data/statistics.json";
